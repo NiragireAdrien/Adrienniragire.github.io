@@ -1,0 +1,19 @@
+:host::ng-deep {
+
+  .p-datatable .p-datatable-wrapper .p-datatable-table {
+    .p-datatable-tbody tr td {
+      p-button:last-child {
+        margin-right: 0 !important;
+      }
+
+      p-button .p-button {
+        width: 30px !important;
+        height: 30px !important;
+
+        .p-button-icon {
+          font-size: 13px !important;
+        }
+      }
+    }
+  }
+}

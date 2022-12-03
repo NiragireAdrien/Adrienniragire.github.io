@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <form autocomplete="off" [formGroup]="form" *ngIf="form">
+      <div class="mb-1 form-group">
+        <app-form-control>
+          <label for="First-Name">First Name</label>
+          <input type="text" pInputText id="First-Name" [formControlName]="'firstName'">
+        </app-form-control>
+      </div>
+      <div class="mb-1 form-group">
+        <app-form-control>
+          <label for="Last-Name">Second Name</label>
+          <input type="text" pInputText id="Last-Name" [formControlName]="'lastName'">
+        </app-form-control>
+      </div>
+      <div class="mb-1 form-group">
+        <app-form-control>
+          <label for="Email">Email</label>
+          <input type="text" pInputText id="Email" [formControlName]="'email'">
+        </app-form-control>
+      </div>
+      <div class="mb-1 form-group">
+        <app-form-control>
+          <label for="Phone-Number">Phone Number</label>
+          <input type="text" pInputText id="Phone-Number" [formControlName]="'phoneNumber'">
+        </app-form-control>
+      </div>
+      <div class="mb-1 form-group">
+        <app-form-control>
+          <label for="Service">Service</label>
+          <p-dropdown id="Service" [options]="serviceOptions" [autoDisplayFirst]="false" [formControlName]="'service'"></p-dropdown>
+        </app-form-control>
+      </div>
+      <div class="mb-3 form-group">
+        <app-form-control>
+          <label for="appointmentDate">Appointment Date</label>
+          <p-calendar id="appointmentDate" [minDate]="appointmentMinDate" [showIcon]="true" [showTime]="true" [formControlName]="'appointmentDate'"></p-calendar>
+        </app-form-control>
+      </div>
+      <div class="d-flex justify-content-between">
+        <p-button (click)="onAcceptAppointmentClicked()" class="p-button-success" label="Accept Appointment"></p-button>
+        <p-button (click)="onRejectAppointmentClicked()" class="p-button-danger" label="Reject Appointment"></p-button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+
+<p-progressSpinner *ngIf="showLoader"></p-progressSpinner>

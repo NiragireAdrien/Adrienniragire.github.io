@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 p-0">
+    <app-nav-bar [options]="navbarOptions"></app-nav-bar>
+  </div>
+</div>
+
+<div [@routeAnimations]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</div>
+

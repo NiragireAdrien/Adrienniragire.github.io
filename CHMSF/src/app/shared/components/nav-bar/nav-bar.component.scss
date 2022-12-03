@@ -1,0 +1,37 @@
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 50px;
+  height: 50px;
+  align-items: center;
+  box-shadow: 0 0 10px #000000;
+  margin-bottom: 20px;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0 !important;
+
+    li {
+      margin-right: 20px;
+    }
+
+    li:last-child {
+      margin-right: 0 !important;
+    }
+
+    a{
+      color: black !important;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0d6efd !important;
+    }
+
+    .is-active {
+      color: #0d6efd !important;
+    }
+  }
+}

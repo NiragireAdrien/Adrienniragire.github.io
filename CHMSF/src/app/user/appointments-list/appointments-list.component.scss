@@ -1,0 +1,13 @@
+.ml-10 {
+  margin-left: 10px;
+}
+
+:host::ng-deep {
+  .p-button-danger:enabled:hover {
+    .p-button {
+      background: #DC2626 !important;
+      color: #ffffff;
+      border-color: #DC2626;
+    }
+  }
+}

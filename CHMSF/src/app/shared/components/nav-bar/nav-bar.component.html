@@ -1,0 +1,8 @@
+<div class="navbar-container" *ngIf="options.length > 0">
+  <ul>
+    <li *ngFor="let option of options">
+      <a *ngIf="option.label !== 'Logout'" [routerLink]="[option.route]" [routerLinkActive]="['is-active']">{{option?.label}}</a>
+      <a *ngIf="option.label === 'Logout'" (click)="onLogOutOptionClicked(option)">{{option?.label}}</a>
+    </li>
+  </ul>
+</div>

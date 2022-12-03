@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 !important;
+}
+
+.form-group {
+  label {
+    display: block !important;
+  }
+
+  input, .p-dropdown, .p-calendar {
+    width: 100% !important;
+  }
+
+  input:enabled:focus {
+    box-shadow: none !important;
+  }
+}
+
+.p-button-label {
+  font-weight: 400 !important;
+}
+
+.p-button-danger .p-button {
+  color: #ffffff;
+  background: #EF4444 !important;
+  border: 1px solid #EF4444;
+}
+.p-button-danger .p-button:enabled:hover {
+  background: #DC2626 !important;
+  color: #ffffff;
+  border-color: #DC2626 !important;
+}
+
+.p-button-success .p-button {
+  color: #ffffff;
+  background: #22C55E !important;
+  border: 1px solid #22C55E;
+}
+.p-button-success .p-button:enabled:hover {
+  background: #16A34A !important;
+  color: #ffffff;
+  border-color: #16A34A !important;
+}
+
+p-progressspinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
